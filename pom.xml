@@ -94,7 +94,7 @@
       <!--<artifactId>GwtCordova</artifactId>-->
       <!--&lt;!&ndash;<version>0.1-SNAPSHOT</version>&ndash;&gt;-->
       <!--<version>0.1</version>-->
-      <groupId>com.florianf.gwtcordova</groupId>
+      <groupId>com.github.manolo.gwtcordova</groupId>
       <artifactId>gwtcordova</artifactId>
       <version>0.2-SNAPSHOT</version>
       <scope>provided</scope>
