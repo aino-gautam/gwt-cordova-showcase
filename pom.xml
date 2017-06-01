@@ -7,19 +7,20 @@
   <artifactId>gwtcordova-showcase</artifactId>
   <packaging>war</packaging>
   <version>0.1-SNAPSHOT</version>
-  <name>GWT Cordova Demo</name>
+  <name>gwt-cordova-demo</name>
 
   <properties>
     <!-- Convenience property to set the GWT version -->
-    <gwtVersion>2.8.0-beta1</gwtVersion>
-    <!-- Note: GWT needs at least java 1.6 -->
+    <gwtVersion>2.8.1</gwtVersion>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
 
+    <appModuleName>com.florianf.gwtcordovashowcase.GwtCordovaShowcase</appModuleName>
+    <moduleShortName>gwtcordovashowcase</moduleShortName>
+    <webappDirectory>${project.build.directory}/${project.build.finalName}</webappDirectory>
   </properties>
 
   <repositories>
-
     <repository>
       <id>sonatype-snapshots</id>
       <url>http://oss.sonatype.org/content/repositories/snapshots</url>
@@ -95,7 +96,7 @@
       <!--<version>0.1</version>-->
       <groupId>com.florianf.gwtcordova</groupId>
       <artifactId>gwtcordova</artifactId>
-      <version>0.1</version>
+      <version>0.2-SNAPSHOT</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
@@ -114,49 +115,59 @@
   </dependencies>
 
   <build>
+    <outputDirectory>${webappDirectory}/WEB-INF/classes</outputDirectory>
+    <finalName>${project.name}</finalName>
     <plugins>
-      <!-- GWT Maven Plugin-->
       <plugin>
-        <groupId>org.codehaus.mojo</groupId>
+        <groupId>net.ltgt.gwt.maven</groupId>
         <artifactId>gwt-maven-plugin</artifactId>
         <executions>
           <execution>
             <goals>
               <goal>compile</goal>
+              <goal>test</goal>
             </goals>
           </execution>
         </executions>
-        <!-- Plugin configuration. There are many available options, 
-             see gwt-maven-plugin documentation at codehaus.org -->
         <configuration>
-          <disableCastChecking>true</disableCastChecking>
-          <disableClassMetadata>true</disableClassMetadata>
-          <enableAssertions>false</enableAssertions>
-          <closureCompiler>true</closureCompiler>
-          <style>PRETTY</style>
-          <modules>
-            <module>com.florianf.gwtcordovashowcase.GwtCordovaShowcase</module>
-          </modules>
-          <!-- URL that should be opened by DevMode (gwt:run). -->
-          <runTarget>index.html</runTarget>
-          <bindAddress>0.0.0.0</bindAddress>
-          <copyWebapp>true</copyWebapp>
-          <warSourceDirectory>${basedir}/src/main/webapp_sdm</warSourceDirectory>
-          <workDir>${basedir}/target/sdm_workdir</workDir>
-          <launcherDir>${basedir}/sdm_launch</launcherDir>
-          <!-- Ask GWT to create the Story of Your Compile (SOYC) (gwt:compile) -->
-          <compileReport>true</compileReport>
-          <compilerMetrics>true</compilerMetrics>
+          <moduleName>${appModuleName}</moduleName>
+          <moduleShortName>${appModuleShorName}</moduleShortName>
+          <failOnError>true</failOnError>
+          <sourceLevel>1.8</sourceLevel>
+          <compilerArgs>
+            <arg>-compileReport</arg>
+            <arg>-style</arg>
+            <arg>PRETTY</arg>
+            <arg>-XcompilerMetrics</arg>
+          </compilerArgs>
+          <warDir>${webappDirectory}</warDir>
+          <classpathScope>compile+runtime</classpathScope>
+          <startupUrls>
+            <startupUrl>index.html</startupUrl>
+          </startupUrls>
         </configuration>
       </plugin>
 
-      <!-- Skip normal test execution, we use gwt:test instead -->
       <plugin>
-        <artifactId>maven-surefire-plugin</artifactId>
-        <version>2.17</version>
-        <configuration>
-          <skip>true</skip>
-        </configuration>
+        <artifactId>maven-resources-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>copy-resources</id>
+            <phase>generate-sources</phase>
+            <goals>
+              <goal>copy-resources</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>${webappDirectory}</outputDirectory>
+              <resources>
+                <resource>
+                  <directory>src/main/webapp</directory>
+                  <filtering>true</filtering>
+                </resource>
+              </resources>
+            </configuration>
+          </execution>
+        </executions>
       </plugin>
     </plugins>
   </build>
