@@ -1,0 +1,96 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "cordova-volume-control",
+        "scope": null,
+        "escapedName": "cordova-volume-control",
+        "name": "cordova-volume-control",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "/Users/manolo/gwt/valencia/pruebas/testApp/node_modules"
+    ]
+  ],
+  "_from": "cordova-volume-control@latest",
+  "_id": "cordova-volume-control@0.1.10",
+  "_inCache": true,
+  "_location": "/cordova-volume-control",
+  "_nodeVersion": "2.5.0",
+  "_npmUser": {
+    "name": "mgcrea",
+    "email": "olivier@mg-crea.com"
+  },
+  "_npmVersion": "2.14.4",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "cordova-volume-control",
+    "scope": null,
+    "escapedName": "cordova-volume-control",
+    "name": "cordova-volume-control",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-volume-control/-/cordova-volume-control-0.1.10.tgz",
+  "_shasum": "342206edf57f8c1e6b65c6fcaff16a7609489670",
+  "_shrinkwrap": null,
+  "_spec": "cordova-volume-control",
+  "_where": "/Users/manolo/gwt/valencia/pruebas/testApp/node_modules",
+  "author": {
+    "name": "Olivier Louvignes",
+    "email": "olivier@mg-crea.com"
+  },
+  "bugs": {
+    "url": "https://github.com/mgcrea/cordova-plugin-volume-control/issues"
+  },
+  "cordova": {
+    "id": "cordova-volume-control",
+    "platforms": [
+      "ios"
+    ]
+  },
+  "dependencies": {},
+  "description": "Cordova Volume Control Plugin",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "342206edf57f8c1e6b65c6fcaff16a7609489670",
+    "tarball": "https://registry.npmjs.org/cordova-volume-control/-/cordova-volume-control-0.1.10.tgz"
+  },
+  "engines": [
+    {
+      "name": "cordova-ios",
+      "version": ">=3.6.0"
+    }
+  ],
+  "gitHead": "87ed7016da7912f4c2fa6c1c5ddb991753d53281",
+  "homepage": "https://github.com/mgcrea/cordova-plugin-volume-control#readme",
+  "keywords": [
+    "cordova",
+    "unity",
+    "ecosystem:cordova",
+    "cordova-ios"
+  ],
+  "license": "MIT",
+  "maintainers": [
+    {
+      "name": "mgcrea",
+      "email": "olivier@mg-crea.com"
+    }
+  ],
+  "name": "cordova-volume-control",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mgcrea/cordova-plugin-volume-control.git"
+  },
+  "scripts": {},
+  "version": "0.1.10"
+}

@@ -6,16 +6,17 @@ import com.google.gwt.user.client.ui.RootPanel;
 
 public class GwtCordovaShowcase implements EntryPoint {
 
-    public void onModuleLoad() {
-        Document.addEventListener("deviceready", event -> startApplication());
-    }
+	public void onModuleLoad() {
+		Document.addEventListener("deviceready", event -> startApplication());
+	}
 
-    private void startApplication() {
-        RootPanel.get().add(new DeviceSample());
-        RootPanel.get().add(new LifecycleSample());
-        RootPanel.get().add(new NetworkSample());
-        RootPanel.get().add(new CameraSample());
-        RootPanel.get().add(new ContactsSample());
-    }
+	private void startApplication() {
+
+		RootPanel.get().add(new DeviceSample());
+		RootPanel.get().add(new LifecycleSample());
+		RootPanel.get().add(new NetworkSample());
+		RootPanel.get().add(new CameraSample());
+		RootPanel.get().add(new ContactsSample());
+	}
 
 }

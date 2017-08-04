@@ -1,0 +1,40 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "es.manolo.pruebas.testapp"
+        },
+        "cordova-plugin-contacts": {
+            "PACKAGE_NAME": "es.manolo.pruebas.testapp"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "es.manolo.pruebas.testapp"
+        },
+        "cordova-plugin-media": {
+            "PACKAGE_NAME": "es.manolo.pruebas.testapp"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "es.manolo.pruebas.testapp"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "es.manolo.pruebas.testapp"
+        },
+        "cordova-volume-control": {
+            "PACKAGE_NAME": "es.manolo.pruebas.testapp"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "es.manolo.pruebas.testapp"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "es.manolo.pruebas.testapp"
+        }
+    }
+}
